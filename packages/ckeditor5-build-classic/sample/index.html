@@ -28,7 +28,22 @@
 
 <script src="../build/ckeditor.js"></script>
 <script>
-	ClassicEditor.create( document.querySelector( '#editor' ) )
+	ClassicEditor.create( document.querySelector( '#editor' ), {
+			fontSize: {
+				options: [
+					9,
+					11,
+					13,
+					'default',
+					17,
+					19,
+					21
+				]
+			},
+			toolbar: [
+				'heading', 'bulletedList', 'numberedList', 'fontSize', 'undo', 'redo', 'imageUpload'
+			]
+		})
 		.then( editor => {
 			window.editor = editor;
 		} )
